@@ -73,13 +73,13 @@
                                 </div>
                             </div>
                         </form>
-                        <a href="{{route("login.redirect",'google')}}">Login with Google</a>
-                        <a href="{{route('login.redirect','facebook')}}">Login with Facebook</a>
+
                     </div>
 
 
                 </div>
             </div>
         </div>
+        <x-social-login/>
     </div>
 @endsection

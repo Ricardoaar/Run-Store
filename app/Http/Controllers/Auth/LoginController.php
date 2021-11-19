@@ -57,8 +57,15 @@ class LoginController extends Controller
             auth()->login($user);
             return redirect()->route('home');
         } else {
-            return redirect('/login')->withErrors('User not found please sign up first.');
-        }
 
+            $user = User::create([
+                'name' => $userMedia->getName(),
+                'email' => $userMedia->getEmail(),
+                'password' => null,
+            ]);
+            auth()->login($user);
+            return redirect()->route('home');
+
+        }
     }
 }
