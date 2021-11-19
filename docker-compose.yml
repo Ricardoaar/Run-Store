@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+    mysql:
+        image: mysql:latest
+        ports:
+            - "3306:3306"
+        volumes:
+            - /database/data/mysql:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD:adm123
+            - MYSQL_DATABASE:marvel-store

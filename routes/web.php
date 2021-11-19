@@ -21,31 +21,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-use Laravel\Socialite\Facades\Socialite;
-
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('facebook')->redirect();
-});
-
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('facebook')->user();
-
-    // $user->token
-});
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
-
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('google')->user();
-
-    // $user->token
-});
+Route::get('/login/{driver}',
+    [App\Http\Controllers\Auth\LoginController::class, 'redirectToProvider'])
+    ->name('login.redirect');
+Route::get('/login/{driver}/callback',
+    [App\Http\Controllers\Auth\LoginController::class, 'getUserInformation'])
+    ->name('login.callback');
