@@ -2,7 +2,7 @@ const apiPublic_key = 'ed8599b17d9bb3e410eac755081493a3';
 const apiPrivate_key = 'a65ed4407b87816c725e542a8418377b45d4512c'
 const ts = 1;
 const hash = '9c288eb92b6ad7da2c0802710487b0dd'
-let content = document.querySelector('#container')
+let content = document.querySelector('#row')
 let contenthtml = "";
 
 //1a65ed4407b87816c725e542a8418377b45d4512ced8599b17d9bb3e410eac755081493a3
@@ -21,15 +21,18 @@ const chargeContent = async () => {
             const pic = characters[i].thumbnail.path + ".jpg"
 
             contenthtml += `
-             <div class= "container">
-             <div class= "card-deck">
-             <div class="card">
-             <img src="${pic}" class="card-img-top" alt="...">
-             <div class="card-body">
-             <h5 class="card-title">${characters[i].name}</h5>
-
-          </div>
-          </div>
+             
+            
+                <div class= "col-sm d-flex justify-content-center">
+                <div class="card _card mt-3">
+                    <img src="${pic}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">${characters[i].name}</h5>
+                        
+                    </div>
+                </div>
+                </div>
+         
             `
 
 

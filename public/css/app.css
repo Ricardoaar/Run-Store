@@ -4363,6 +4363,12 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  
+}
+._card{
+  height: 15rem;
+  width: 13rem;
+
 }
 .card > hr {
   margin-right: 0;
@@ -4395,6 +4401,9 @@ input[type=button].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+}
+.card img{
+  height: 10rem;
 }
 
 .card-subtitle {
@@ -4471,6 +4480,7 @@ input[type=button].btn-block {
 .card-img-bottom {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
+  
 }
 
 .card-deck .card {
