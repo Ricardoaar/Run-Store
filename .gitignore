@@ -33,3 +33,5 @@ public_html/hot
 storage/*.key
 /.vagrant
 /database/data/mysql
+
+public/js/config.js

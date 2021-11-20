@@ -1,14 +1,15 @@
-const apiPublic_key = 'ed8599b17d9bb3e410eac755081493a3';
-const apiPrivate_key = 'a65ed4407b87816c725e542a8418377b45d4512c'
-const ts = 1;
-const hash = '9c288eb92b6ad7da2c0802710487b0dd'
-let content = document.querySelector('#row')
-let contenthtml = "";
+import config from './config.js';
 
-//1a65ed4407b87816c725e542a8418377b45d4512ced8599b17d9bb3e410eac755081493a3
+const apiPublic_key = config.apiPublic_key;
+const ts = 1;
+const hash = config.hash;
+let content = document.querySelector('#row')
+const fullUrl = `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${apiPublic_key}&hash=${hash}`;
+
+let htmlContent = "";
 const chargeContent = async () => {
     try {
-        const result = await fetch('https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=ed8599b17d9bb3e410eac755081493a3&hash=9c288eb92b6ad7da2c0802710487b0dd');
+        const result = await fetch(fullUrl);
         console.log(result);
 
 
@@ -18,10 +19,10 @@ const chargeContent = async () => {
 
         for (let i = 0; i < characters.length; i += 1) {
             console.log(characters[i].name);
-            
 
-            contenthtml += `
-             
+
+            htmlContent += `
+
 
                 <div class= "col-sm d-flex justify-content-center">
                     <div class="card _card mt-3">
@@ -36,7 +37,7 @@ const chargeContent = async () => {
 
         }
 
-        content.innerHTML = contenthtml;
+        content.innerHTML = htmlContent;
 
 
     } catch (error) {
