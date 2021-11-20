@@ -39,4 +39,10 @@ return [
         'client_secret' => env('GOOGLE_API_SECRET'),
         'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
+
+    'mercadopago' => [
+        'key' => env('MP_PUBLIC_KEY'),
+        'token' => env('MP_ACCESS_TOKEN'),
+    ]
+
 ];

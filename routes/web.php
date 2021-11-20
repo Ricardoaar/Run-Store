@@ -22,10 +22,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
 Route::get('/login/{driver}',
     [App\Http\Controllers\Auth\LoginController::class, 'redirectToProvider'])
     ->name('login.redirect');
 Route::get('/login/{driver}/callback',
     [App\Http\Controllers\Auth\LoginController::class, 'getUserInformation'])
     ->name('login.callback');
+
+Route::get('/store/my-car', App\Http\Controllers\ShoppingCarController::class);
+
+

@@ -11,7 +11,6 @@
         <div class="row d-flex justify-content-center" id="row">
 
         </div>
-
     </div>
     <script src="{{asset('js/fetchMarvel.js')}}" type="module"></script>
 
