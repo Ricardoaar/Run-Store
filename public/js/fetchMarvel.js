@@ -18,21 +18,19 @@ const chargeContent = async () => {
 
         for (let i = 0; i < characters.length; i += 1) {
             console.log(characters[i].name);
-            const pic = characters[i].thumbnail.path + ".jpg"
+            
 
             contenthtml += `
              
-            
+
                 <div class= "col-sm d-flex justify-content-center">
-                <div class="card _card mt-3">
-                    <img src="${pic}" class="card-img-top" alt="...">
-                        <div class="card-body">
+                    <div class="card _card mt-3">
+                        <img src="${characters[i].thumbnail.path}.${characters[i].thumbnail.extension}" class="card-img-top" alt="...">
+                     <div class="card-body">
                         <h5 class="card-title">${characters[i].name}</h5>
-                        
+                     </div>
                     </div>
                 </div>
-                </div>
-         
             `
 
 
