@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 class ShoppingCarController extends Controller
 {
-    public function index()
+
+
+    public function buy($id)
     {
-        return view('payments.payment');
+        return view('payments.payment', compact('id'));
+
     }
-
-
 }

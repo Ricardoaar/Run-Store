@@ -29,6 +29,7 @@ Route::get('/login/{driver}/callback',
     [App\Http\Controllers\Auth\LoginController::class, 'getUserInformation'])
     ->name('login.callback');
 
-Route::get('/store/my-car', App\Http\Controllers\ShoppingCarController::class);
+
+Route::get('/store/my-car/{id}', [App\Http\Controllers\ShoppingCarController::class, 'buy']);
 
 

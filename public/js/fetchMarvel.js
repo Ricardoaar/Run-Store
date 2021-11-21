@@ -1,8 +1,8 @@
 import config from './config.js';
 
-const apiPublic_key = config.apiPublic_key;
+const apiPublic_key = config.MARVEL_PUBLIC_KEY;
 const ts = 1;
-const hash = config.hash;
+const hash = config.MARVEL_HASH;
 let content = document.querySelector('#row')
 const fullUrl = `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${apiPublic_key}&hash=${hash}`;
 
@@ -23,6 +23,7 @@ const chargeContent = async () => {
 
             htmlContent += `
 
+                <a href="/store/my-car/${characters[i].id}">
 
                 <div class= "col-sm d-flex justify-content-center">
                     <div class="card _card mt-3">
@@ -32,6 +33,8 @@ const chargeContent = async () => {
                      </div>
                     </div>
                 </div>
+
+</a>
             `
 
 
