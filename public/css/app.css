@@ -62,7 +62,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: rgb(242, 21, 21);
+  background-color: rgba(67, 103, 192,0.4);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4363,7 +4363,7 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  
+
 }
 ._card{
   height: 15rem;
@@ -4480,7 +4480,7 @@ input[type=button].btn-block {
 .card-img-bottom {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
-  
+
 }
 
 .card-deck .card {
